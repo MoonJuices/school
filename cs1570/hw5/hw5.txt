@@ -1,0 +1,10 @@
+Programmer: LUCAS KEHOE		Date: 10/1/2018
+Class: CS1570			Section: A
+File: hw5.txt
+Purpose: This .txt file is a statement of my observations from the
+accompanying .cpp file.
+The profit calculation value appears to be proportional to the number of
+animal parts and inversely proportional to the number of animal types. In
+other words, the profit calculation goes up as the number of animal parts
+goes up and the profit calculation goes down as the number of animal types
+goes up.
