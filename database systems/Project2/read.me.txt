@@ -1,0 +1,13 @@
+name: Lucas Kehoe
+date: 11/20/2019
+platform: Windows
+special steps: include boost_1_71_0 files and mysql-connector-cpp-8.0.18-winx64 (steps on canvas)
+bugs: N/A that are known
+summary: C++ program that connects to database and accesses car, manufacturer, and dealer tables.
+Can add car, manufacturer, and dealer to tables.
+Can list cars and dealers.
+Can find cars by manufacturer and find cars by zip.
+Can delete cars and dealers.
+Can give summary of manufacturer's average car price.
+
+

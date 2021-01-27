@@ -1,0 +1,16 @@
+Name: Lucas Kehoe
+
+Date: 09/08/2019
+
+Platform: Windows
+
+Bugs: If you type a code in wrong, you may run into some problems? Program will output Errors when
+a code is input incorrectly.
+
+Summary: My program will write out to 3 .txt files "cars.txt", "manufacturers.txt", and "dealers.txt".
+The program is then capable of listing the cars and dealers in the files, and is also capable of finding
+cars made by specific manufacturers and finding cars in specific zipcodes.
+
+Software Engineering Log:
+9/7/19: Write program
+9/8/19: Clean code up a little and add useful comments

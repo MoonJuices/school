@@ -1,0 +1,8 @@
+Name: Lucas Kehoe
+Date: 12/4/2019
+Special Steps: Start from login.html
+Bugs: None known
+Summary: Webpage that can access database.
+Able to create recipes, list recipe's ingredients, buy recipe's ingredients, and add ingredients to inventory.
+Every page has an .html and .php duo (with the exception of the main menu).
+The .html file is responsible for collecting user input and the .php file is responsible for accessing the database and performing a task with user input.
