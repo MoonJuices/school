@@ -1,0 +1,133 @@
+---
+title: "test"
+author: "Lucas"
+date: "12/12/2019"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+```{r}
+lol <- read.csv("luga_lol_match_history.csv")
+```
+```{r}
+lulol <- lol %>% 
+  filter(team=="Lindenwood University")
+lulol$summoner[lulol$summoner %in% "PoppyaOn"] <- "LoL Coach Sam"
+lulol$wr <- ifelse(lulol$victorydefeat=="victory",1,0)
+lulol
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,kdaratio), y=kdaratio,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="KDA Ratio by Summoner",x="Summoner",y="KDA Ratio")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,killparticipation), y=killparticipation,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Kill Participation by Summoner",x="Summoner",y="Kill Participation")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,csperminute), y=csperminute,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="CS Per Minute by Summoner",x="Summoner",y="CS Per Minute")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,damageperdeath), y=damageperdeath,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Damage Per Death by Summoner",x="Summoner",y="Damage Per Death")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,damageshare), y=damageshare,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Damage Share by Summoner",x="Summoner",y="Damage Share")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,damagepergold), y=damagepergold,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Damage Per Gold by Summoner",x="Summoner",y="Damage Per Gold")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,goldadvantage), y=goldadvantage,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Gold Advantage by Summoner",x="Summoner",y="Gold Advantage")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,csadvantage), y=csadvantage,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="CS Advantage by Summoner",x="Summoner",y="CS Advantage")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,firstblood), y=firstblood,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="First Blood by Summoner",x="Summoner",y="First Blood")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,wr), y=wr,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Win Rate by Summoner",x="Summoner",y="Win Rate")+
+      coord_flip()
+```
+```{r}
+adclol <- lol %>% 
+  filter(role=="adc")
+```
+```{r}
+ggplot(adclol, mapping=aes(x=reorder(summoner, damageshare),y=damageshare,fill=team))+
+  stat_summary(fun.y="mean",geom="bar")+
+  labs(title="KDA by ADC")+
+  coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,controlwardspurchased), y=controlwardspurchased,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Average Control Wards Purchased by Summoner",x="Summoner",y="Average Control Wards Purchased")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,totaldamagetoobjectives), y=totaldamagetoobjectives,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+      labs(title="Average Total Damage to Objectives by Summoner",x="Summoner",y="Average Total Damage to Objectives")+
+      coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,wardsplaced), y=wardsplaced,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+  coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,wardsdestroyed), y=wardsdestroyed,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+  coord_flip()
+```
+```{r}
+lol$wr <- ifelse(lol$victorydefeat=="victory",1,0)
+ggplot(lol,mapping=aes(x=reorder(team,wr),y=wr))+
+  stat_summary(fun.y="mean",geom="bar")+
+  coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,death), y=death,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+  labs(title="Average Deaths per Game by Summoner",x="Summoner",y="Average Deaths")+
+  coord_flip()
+```
+```{r}
+ggplot(lulol, mapping=aes(x=reorder(summoner,kill), y=kill,fill=role))+
+      stat_summary(fun.y="mean",geom="bar")+
+  labs(title="Average Deaths per Game by Summoner",x="Summoner",y="Average Deaths")+
+  coord_flip()
+```
+
+
