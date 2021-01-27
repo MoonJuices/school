@@ -1,0 +1,7 @@
+1. Lucas Kehoe
+2. 10/27/2019
+3. Windows
+4. N/A
+5. When clicking on words in the word cloud, the piecchart does not update
+6. There is a pane for the "Word Cloud" and there is a Pie Chart to the right.
+Below there is a textfield and 3 functional buttons that are self explanatory.

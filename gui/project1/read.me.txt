@@ -1,0 +1,6 @@
+a. Lucas Kehoe
+b. 9/30/2019
+c. Windows
+d. N/A
+e. No known bugs.
+f. This program will generate random r g b values and present them in a colored circle.

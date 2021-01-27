@@ -1,0 +1,6 @@
+Name: Lucas Kehoe
+Date: 12/09/2019
+Platform: Windows
+Special Steps: Use Netbeans to run the program. Window is locked to 1000px by 1000px so make sure your monitor resolution can fit the window. Adjust file path to allow rules pdf to be accessed (Line 897).
+Bugs: None known.
+Summary: Allows user to play the board game Settlers of Catan by Klaus Teuber. A previous knowledge of the games rules would be useful.
