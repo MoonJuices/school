@@ -1,0 +1,98 @@
+                   Lucas Kehoe        CSC 36000     Section 11
+                   Spring 2020       Assignment #5
+                    ----------------------------------------
+                    ----------------------------------------
+
+Item ID Number LS677 successfully entered into database.
+------------------------------------------------------------
+Item ID Number TV198 successfully entered into database.
+------------------------------------------------------------
+Item ID Number WF088 successfully entered into database.
+------------------------------------------------------------
+Item ID Number DW222 successfully entered into database.
+------------------------------------------------------------
+Item ID Number LB532 successfully entered into database.
+------------------------------------------------------------
+Item ID Number MO341 successfully entered into database.
+------------------------------------------------------------
+Item ID Number FO552 successfully entered into database.
+------------------------------------------------------------
+Item ID Number CT123 successfully entered into database.
+------------------------------------------------------------
+Item ID Number AL853 successfully entered into database.
+------------------------------------------------------------
+Item ID Number BS692 successfully entered into database.
+------------------------------------------------------------
+Item ID Number GC098 successfully entered into database.
+------------------------------------------------------------
+
+      -=- JAKE'S HARDWARE INVENTORY REPORT -=-
+Item        Item                  Quantity    Quantity
+ID Number   Description            On Hand    On Order
+------------------------------------------------------------
+AL853       Photo Albums               123         273
+BS692       Baby Strollers              92          17
+CT123       Christmas Tree               2          33
+DW222       Digital Watch              308          55
+FO552       Oscilating Fan              16          92
+GC098       Gift Cards                 503         492
+LB532       Light Bulb 75 watt         419         198
+LS677       Lamp Shades                 12          35
+MO341       Microwave Oven              11          39
+TV198       Television                  72          34
+WF088       Wood Fencing               156          25
+------------------------------------------------------------
+
+ERROR - Attempt to delete an item (PC345) not in the database list.
+------------------------------------------------------------
+Item ID Number LB888 successfully entered into database.
+------------------------------------------------------------
+ERROR - Attempt to insert a duplicate item (FO552) into the database.
+------------------------------------------------------------
+Item ID Number CT123 successfully deleted from database.
+------------------------------------------------------------
+Quantity on Hand for item (BS692) successfully updated.
+------------------------------------------------------------
+Quantity on Order for item (MO341) successfully updated.
+------------------------------------------------------------
+Quantity on Hand for item (MO341) successfully updated.
+------------------------------------------------------------
+Quantity on Hand for item (LS677) successfully updated.
+------------------------------------------------------------
+
+              -=- INDIVIDUAL ITEM REPORT -=-
+Item        Item                  Quantity    Quantity
+ID Number   Description            On Hand    On Order
+------------------------------------------------------------
+MO341       Microwave Oven              16          34
+------------------------------------------------------------
+
+Item ID Number ND333 successfully entered into database.
+------------------------------------------------------------
+Item ID Number YS113 successfully entered into database.
+------------------------------------------------------------
+Item ID Number LS677 successfully deleted from database.
+------------------------------------------------------------
+
+      -=- JAKE'S HARDWARE INVENTORY REPORT -=-
+Item        Item                  Quantity    Quantity
+ID Number   Description            On Hand    On Order
+------------------------------------------------------------
+AL853       Photo Albums               123         273
+BS692       Baby Strollers              86          17
+DW222       Digital Watch              308          55
+FO552       Oscilating Fan              16          92
+GC098       Gift Cards                 503         492
+LB532       Light Bulb 75 watt         419         198
+LB888       Ladies Blouses             111         213
+MO341       Microwave Oven              16          34
+ND333       Diamond Necklace             9           3
+TV198       Television                  72          34
+WF088       Wood Fencing               156          25
+YS113       Youth Shirts                33          71
+------------------------------------------------------------
+
+
+          -------------------------
+          | END OF PROGRAM OUTPUT |
+          -------------------------
