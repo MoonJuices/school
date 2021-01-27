@@ -1,0 +1,15 @@
+CSC35500 Project 2
+name: 		Lucas Kehoe
+date: 		10/31/2020
+
+compilation: 	to compile the programs, type these commands in linux terminal:
+		g++ -o subject subject.cpp
+		g++ -o royal royal.cpp
+
+run program:	after compiling, two executables are created, one named "subject" and one named "royal", to execute each, type these commands in linux terminal:
+		./subject
+		./royal
+		
+bugs:		occassionally, the royal will print out that it is waiting twice; however, this does not break the program as far as i am aware. similarily, the subject will occassionally print out that it is waiting twice; however this does not break the program either as far as i know.
+
+This project was solved by using semaphores to deny (deny by wait) royals and subjects access to the table when certain conditions were met, such as the table not having enough items (for subjects), the table having too many items (for royals), or if someone else is accessing the table (the SUPER semaphore). Instead, the royals and subjects wait until they are signaled to progress. The subject semaphore is signaled if a royal adds an item to an empty table (0 items to 1 item) and the royal semaphore is signaled if a subject removes an item from a full table (10 items to 9). The "items" are simply 10 different shared memory slots that the royals and subjects can access once at the table, either adding or removing items.

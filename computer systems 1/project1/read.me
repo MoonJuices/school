@@ -1,0 +1,14 @@
+Lucas Kehoe
+
+CSC35500 Programming Project 1
+Due: 9/29/2020, 11:59PM
+
+This project was compiled using "make" to create an executable file "proj1".
+This project can be run by typing "./proj1" in the working directory containing the executable.
+This project has no known bugs at this given time.
+However, because I am new to linux commands and do not know how to formulate more complicated commands, I am unsure if this shell can handle them.
+
+The goal of this project was to create a simple shell in which the user could type commands and see their results. The shell should support cahnging directories, running commands, redirecting input/output, and be able to pipe the output of one command to the input of another.
+I solved this project by dividing the commands into 3 different categories. The first category was changing directories, the second category was non-pipe commands, and the third category was commands containing a pipe. If the command was "cd" then I simply implemented the chdir() function to attempt to change the directory. If the command was not "cd" and was a non-pipe command, then I checked if the user was attempting to background the command (&). Then I checked if the user was attempting to redirect the input (<) or output (>). After checking these things, I used fork() and execvp() functions to attempt to execute the commands accordingly. If the command did contain a pipe, then I used dup2() and execvp() to redirect the output of one command to the input of the second.
+
+Note: Some of the code for this project is not uploaded because I did not write it myself. The code that is uploaded was written by me, Lucas Kehoe.

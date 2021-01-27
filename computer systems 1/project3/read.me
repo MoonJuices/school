@@ -1,0 +1,46 @@
+CSC35500 Project 3
+name: 		Lucas Kehoe
+date: 		12/01/2020
+
+compilation:	to compile the programs, type these commands in your linux terminal:
+		nasm -felf64 -l project3.lst project3.asm
+		ld project3.o -o project3
+		
+run program:	after compiling, you may run the executable by typing this command in the linux terminal:
+		./project3
+		
+bugs:		This program will NOT safeguard against storing numbers that are larger or smaller than a signed 32-bit number will allow. If you plan to store a number that is larger than 2147483647 or smaller than -2147483648, you will encounter errors. This program will give errors if the sum(+), difference(-), product(*), or quotient(/) is out of this possible range of signed 32-bit numbers. The program will give errors if the user divides by 0.
+Dividing a negative number by a negative number typically results in error for some reason.
+This program uses a slightly modified syntax to the example output given on the project. If the user wishes to store a number, they must type 's' immediately followed by the positive or negative number on the same line before hitting enter. This same rule applies for the '+', '-', '*', '/' commands. Now I will provide some examples of correct and incorrect syntax.
+
+Incorrect Syntax:
+s		//user hit enter before giving a number, eax remains 0
+140		//number was put on next line, it is ignored
++ 15		//user put space between command and number, nothing is added to eax
+*		//user hit enter before giving a number, eax is unaffected
+10		//numer was given on next line, it is ignored
+
+Correct Syntax:
+s40		//stores 40 into eax
+--5		//subtracts negative 5 from eax, or adds 5, eax is 45
+/5		//divides eax by 5, eax becomes 9
+*-9		//multiplies eax by -9, eax becomes -81
++1		//adds 1 to eax, eax becomes -80
+
+The working commands are as follows:
+s[positive or negative integer]	//stores integer to eax register
+n					//negates the integer stored in eax register
++[positive or negative integer]	//performs eax=eax+[positive or negative integer]
+-[positive or negative integer]	//performs eax=eax-[positive or negative integer]
+*[positive or negative integer]	//performs eax=eax*[positive or negative integer]
+/[positive or negative integer]	//performs eax=eax/[positive or negative integer]
+d					//prints integer stored in eax register in base 10
+b					//prints integer stored in eax register in base 2
+q					//quits program
+
+This project was solved using careful manipulation of registers to perform simple integer arithmetic
+The store command was solved by converting a string value into an integer numerical representation. This was done by performing a simple loop. The first step was to read in the most significant digit, multiply the stored number by 10, and then add the digit to the stored number. Then repeat this process for all the remaining digits.
+The negate command was solved by just using the assembly languages built in neg function.
+The add command was solved using add, subtract solved using sub, multiply solved using imul, and divide solved using idiv.
+Printing the integer in base 10 was solved by dividing the number by 10 and pushing the remainder onto the stack until the number was 0, then popping the pushed digits off the stack one by one until the full number was printed.
+Printing the integer in base 2 was similar to base 10, except instead of dividing by 10, divide by 2.
